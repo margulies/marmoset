@@ -10,4 +10,4 @@ Jupyter Notebook for generating the figures is located in [marmoset/marmoset_gra
 
 Associated manuscript is available [here](https://www.biorxiv.org/content/early/2018/09/12/415141):
 
-    Buckner RL, Margulies DS. Macroscale Cortical Organization and a Default-Like Transmodal Apex Network in the Marmoset Monkey. bioRxiv 415141; doi: https://doi.org/10.1101/415141
+Buckner RL, Margulies DS. Macroscale Cortical Organization and a Default-Like Transmodal Apex Network in the Marmoset Monkey. bioRxiv 415141; doi: https://doi.org/10.1101/415141
