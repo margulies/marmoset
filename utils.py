@@ -1,3 +1,8 @@
+import matplotlib.cm as cm
+import numpy as np
+from PIL import Image, ImageFilter, ImageDraw
+    
+    
 def keep_Temp(dfX):
     dfX = dfX[(dfX.target.str.contains("Au")) | (dfX.target.str.contains("TPO")) | (dfX.target.str.contains("TE3")) | (dfX.target.str.contains("PGa"))]
     return dfX
@@ -9,7 +14,6 @@ def load_data(keepTemp = False):
 
     import pandas as pd
     import json
-    import numpy as np
     
     df_orig1 = pd.read_csv('data/marmoset_brain_architecture_all_injections.txt')
     df_orig1 = df_orig1.drop_duplicates(subset=['case_id', 'tracer_id'])
@@ -60,8 +64,6 @@ def load_data(keepTemp = False):
 
 def coordinate_tranform(df2):
     # transform coordinates:
-    from PIL import Image, ImageFilter, ImageDraw
-    import numpy as np
     
     img = Image.open("data/injections_bk/CJ182.DY.png")
     flat = Image.open("templates/flat_bw.png")  
@@ -81,8 +83,6 @@ def coordinate_tranform(df2):
 
 def setup_colors():
     # Setup colors:
-    import matplotlib.cm as cm
-    import numpy as np
     
     my_cmap = cm.get_cmap('jet')
 
@@ -108,8 +108,6 @@ def setup_colors():
     return c
 
 def mask_image(filename):
-    import numpy as np
-    from PIL import Image, ImageFilter, ImageDraw
     from scipy.ndimage import morphology
     
     imgD = Image.open(filename)
@@ -134,8 +132,6 @@ def mask_image(filename):
     return np.asarray(im).astype('float')
 
 def make_figure(pairs, cols, filename, no_bkgrd = False, circ_outline = False, inj_circ_diam = 15):
-    import numpy as np
-    from PIL import Image, ImageFilter, ImageDraw
     
     pairs = np.asarray(pairs)
     p = np.ones((pairs.shape[0], 825, 875, 4)) * 255.
@@ -220,9 +216,6 @@ def make_figure(pairs, cols, filename, no_bkgrd = False, circ_outline = False, i
 
 def vis_res(embeddings, matrix, df1, id_flat1, component, filename, rev_col = 0):
     # make injections map
-    import matplotlib.cm as cm
-    import numpy as np
-    from PIL import Image, ImageFilter, ImageDraw
     
     my_cmap = cm.get_cmap('jet')
     
@@ -266,10 +259,7 @@ def vis_res(embeddings, matrix, df1, id_flat1, component, filename, rev_col = 0)
 
 
 def load_mat(df_orig, df, id_flat, n_comps  = 3, preprocess = False):
-    import matplotlib.cm as cm
-    import numpy as np
-    from PIL import Image, ImageFilter, ImageDraw
-    
+
     my_cmap = cm.get_cmap('jet')
 
     img = Image.open("data/injections_bk/CJ182.DY.png")
