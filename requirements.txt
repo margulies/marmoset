@@ -1,0 +1,8 @@
+jsonschema==2.6.0
+mapalign==0.2.1
+matplotlib==2.2.3
+numpy==1.15.1
+pandas==0.23.4
+Pillow==5.2.0
+scikit-learn==0.19.1
+scipy==1.1.0
