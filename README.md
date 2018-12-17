@@ -6,7 +6,7 @@ In keeping with the original data, this work is licensed under the Creative Comm
 
 # To run:
 
-Jupyter Notebook for generating the figures is located in [marmoset/marmoset_gradient.ipynb](https://github.com/margulies/marmoset/blob/master/marmoset/marmoset_gradient.ipynb)
+Jupyter Notebook for generating the figures is located in [marmoset_figures.ipynb](https://github.com/margulies/marmoset/blob/master/marmoset_figures.ipynb)
 
 Associated manuscript is available [here](https://www.biorxiv.org/content/early/2018/09/12/415141):
 
